@@ -4,7 +4,7 @@ kotlinx = "1.7.3"
 ktor = "2.3.5"
 logback = "1.4.14"
 hoplite = "2.7.5"
-kotest = "5.5.5"
+kotest = "5.8.1"
 koin = "3.4.3"
 micrometer = "1.6.3"
 
@@ -37,10 +37,12 @@ koin-logger-slf4 = { module = "io.insert-koin:koin-logger-slf4j", version.ref = 
 koin-ktor = { module = "io.insert-koin:koin-ktor", version.ref = "koin" }
 
 # Test
+ktor-server-test-host-jvm = { module = "io.ktor:ktor-server-test-host-jvm", version.ref = "ktor" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
+kotest-json = { module = "io.kotest:kotest-assertions-json", version.ref = "kotest" }
 mockk-core = { module = "io.mockk:mockk", version = "1.13.8" }
 
 [bundles]
@@ -75,6 +77,7 @@ test = [
     "kotest-assertions-core",
     "kotest-datatest",
     "kotest-property",
+    "kotest-json",
     "mockk-core",
 ]
 
