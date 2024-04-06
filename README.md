@@ -1,3 +1,4 @@
+![check](https://github.com/rp199/ktor-template/actions/workflows/check.yml/badge.svg)
 # Ktor Template
 
 A [ktor](https://ktor.io/) server template with basic setup.
