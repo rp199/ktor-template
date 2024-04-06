@@ -5,7 +5,7 @@ ktor = "2.3.9"
 logback = "1.5.3"
 hoplite = "2.7.5"
 kotest = "5.8.1"
-koin = "3.4.3"
+koin = "3.5.4"
 micrometer = "1.12.4"
 
 [libraries]
