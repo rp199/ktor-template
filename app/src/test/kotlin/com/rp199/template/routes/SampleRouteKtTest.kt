@@ -20,7 +20,7 @@ class SampleRouteKtTest : ShouldSpec() {
                     bodyAsText().shouldBeValidJson().shouldEqualJson(
                         """
                             {
-                                "sample_value": "I did stuff"
+                                "sample_value": "I did stuff2"
                             }
                         """.trimIndent()
                     )
