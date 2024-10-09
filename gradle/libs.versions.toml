@@ -43,7 +43,7 @@ kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.
 kotest-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 kotest-json = { module = "io.kotest:kotest-assertions-json", version.ref = "kotest" }
-mockk-core = { module = "io.mockk:mockk", version = "1.13.12" }
+mockk-core = { module = "io.mockk:mockk", version = "1.13.13" }
 
 [bundles]
 ktor = [
