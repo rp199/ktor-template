@@ -2,7 +2,7 @@
 kotlin = "2.0.21"
 kotlinx = "1.9.0"
 ktor = "2.3.12"
-logback = "1.5.11"
+logback = "1.5.12"
 hoplite = "2.8.2"
 kotest = "5.9.1"
 koin = "4.0.0"
