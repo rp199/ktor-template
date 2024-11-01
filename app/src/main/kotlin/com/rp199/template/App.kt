@@ -4,11 +4,11 @@
 package com.rp199.template
 
 import com.rp199.template.configuration.AppConfig
-import com.rp199.template.configuration.plugin.installCallLogging
-import com.rp199.template.configuration.plugin.installContentNegotiation
-import com.rp199.template.configuration.plugin.installKoin
-import com.rp199.template.configuration.plugin.installMetrics
-import com.rp199.template.configuration.plugin.installRoutes
+import com.rp199.template.configuration.plugin.configureContentNegotiation
+import com.rp199.template.configuration.plugin.configureKoin
+import com.rp199.template.configuration.plugin.configureMetrics
+import com.rp199.template.configuration.plugin.configureMonitoring
+import com.rp199.template.configuration.plugin.configureRoutes
 import com.sksamuel.hoplite.ConfigLoaderBuilder
 import com.sksamuel.hoplite.addResourceSource
 import io.ktor.serialization.ContentConverter
@@ -26,9 +26,9 @@ fun Application.setup() {
         .build()
         .loadConfigOrThrow<AppConfig>()
 
-    installMetrics(config)
-    installKoin()
-    installCallLogging(config)
-    installContentNegotiation(converter = get<ContentConverter>())
-    installRoutes()
+    configureMetrics(config)
+    configureKoin()
+    configureMonitoring(config)
+    configureContentNegotiation(converter = get<ContentConverter>())
+    configureRoutes()
 }

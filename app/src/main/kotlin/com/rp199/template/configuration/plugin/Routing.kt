@@ -6,7 +6,7 @@ import io.ktor.server.application.Application
 import io.ktor.server.routing.routing
 import org.koin.ktor.ext.get
 
-fun Application.installRoutes() {
+fun Application.configureRoutes() {
     routing {
         healthCheck()
         sampleRoute(sampleService = get())

@@ -26,7 +26,7 @@ import io.micrometer.prometheus.PrometheusMeterRegistry
 import org.slf4j.event.Level
 import java.util.UUID
 
-fun Application.installCallLogging(appConfig: AppConfig) {
+fun Application.configureMonitoring(appConfig: AppConfig) {
     install(CallLogging) {
         level = Level.INFO
         disableDefaultColors()
@@ -57,7 +57,7 @@ fun Application.installCallLogging(appConfig: AppConfig) {
     }
 }
 
-fun Application.installMetrics(appConfig: AppConfig) {
+fun Application.configureMetrics(appConfig: AppConfig) {
     val appMicrometerRegistry = PrometheusMeterRegistry(PrometheusConfig.DEFAULT).apply {
         config().commonTags("application", appConfig.applicationName)
     }
