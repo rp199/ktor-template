@@ -1,5 +1,6 @@
 package com.rp199.template.routes
 
+import com.rp199.template.configureApp
 import io.kotest.assertions.json.shouldBeValidJson
 import io.kotest.assertions.json.shouldEqualJson
 import io.kotest.core.spec.style.ShouldSpec
@@ -14,7 +15,9 @@ class SampleRouteKtTest : ShouldSpec() {
     init {
         should("application start and respond") {
             testApplication {
-
+                application {
+                    configureApp()
+                }
                 client.get("/test").apply {
                     status shouldBe HttpStatusCode.OK
                     bodyAsText().shouldBeValidJson().shouldEqualJson(

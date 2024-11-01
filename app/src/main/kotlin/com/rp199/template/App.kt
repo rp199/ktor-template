@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
 }
 
 
-fun Application.setup() {
+fun Application.configureApp() {
     val config = ConfigLoaderBuilder.default()
         .addResourceSource("/application.conf")
         .build()
