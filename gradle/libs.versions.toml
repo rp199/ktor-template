@@ -1,7 +1,7 @@
 [versions]
 kotlin = "2.1.20"
 kotlinx = "1.10.1"
-ktor = "3.1.1"
+ktor = "3.1.2"
 logback = "1.5.18"
 hoplite = "2.9.0"
 kotest = "5.9.1"
