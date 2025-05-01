@@ -29,7 +29,7 @@ janino = { module = "org.codehaus.janino:janino", version = "3.1.12" }
 
 # configuration
 hoplite-core = { module = "com.sksamuel.hoplite:hoplite-core", version.ref = "hoplite" }
-hoplite-hocon = { module = "com.sksamuel.hoplite:hoplite-hocon", version.ref = "hoplite" }
+hoplite-yaml = { module = "com.sksamuel.hoplite:hoplite-yaml", version.ref = "hoplite" }
 micrometer-registry-prometheus = { module = "io.micrometer:micrometer-registry-prometheus", version.ref = "micrometer" }
 
 # DI
@@ -63,7 +63,7 @@ koin = [
 
 hoplite = [
     "hoplite-core",
-    "hoplite-hocon"
+    "hoplite-yaml"
 ]
 
 logging = [
