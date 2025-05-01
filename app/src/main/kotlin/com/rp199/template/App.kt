@@ -13,16 +13,30 @@ import com.sksamuel.hoplite.ConfigLoaderBuilder
 import com.sksamuel.hoplite.addResourceSource
 import io.ktor.serialization.ContentConverter
 import io.ktor.server.application.Application
+import io.ktor.server.engine.embeddedServer
+import io.ktor.server.netty.Netty
 import org.koin.ktor.ext.get
+import org.slf4j.LoggerFactory
+
+private val logger = LoggerFactory.getLogger("com.rp199.template.AppKt")
 
 fun main(args: Array<String>) {
-    io.ktor.server.netty.EngineMain.main(args)
+    try {
+        embeddedServer(
+            Netty,
+            port = System.getenv("PORT")?.toInt() ?: 8080,
+            module = Application::configureApp
+        ).start(wait = true)
+    } catch (t: Throwable) {
+        logger.error(t.message, t)
+        throw t
+    }
 }
 
 
 fun Application.configureApp() {
     val config = ConfigLoaderBuilder.default()
-        .addResourceSource("/application.conf")
+        .addResourceSource("/application.yml")
         .build()
         .loadConfigOrThrow<AppConfig>()
 
