@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 /*
@@ -27,7 +28,7 @@ tasks.named<Test>("test") {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_21.majorVersion
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_21
     }
 }
