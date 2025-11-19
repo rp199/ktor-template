@@ -11,11 +11,10 @@ import com.rp199.template.configuration.plugin.configureMonitoring
 import com.rp199.template.configuration.plugin.configureRoutes
 import com.sksamuel.hoplite.ConfigLoaderBuilder
 import com.sksamuel.hoplite.addResourceSource
-import io.ktor.serialization.ContentConverter
 import io.ktor.server.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import org.koin.ktor.ext.get
+import io.ktor.server.plugins.di.dependencies
 import org.slf4j.LoggerFactory
 
 private val logger = LoggerFactory.getLogger("com.rp199.template.AppKt")
@@ -34,7 +33,7 @@ fun main(args: Array<String>) {
 }
 
 
-fun Application.configureApp() {
+suspend fun Application.configureApp() {
     val config = ConfigLoaderBuilder.default()
         .addResourceSource("/application.yml")
         .build()
@@ -43,6 +42,6 @@ fun Application.configureApp() {
     configureMetrics(config)
     configureKoin()
     configureMonitoring(config)
-    configureContentNegotiation(converter = get<ContentConverter>())
+    configureContentNegotiation(converter = dependencies.resolve())
     configureRoutes()
 }
