@@ -1,10 +1,10 @@
 package com.rp199.template.configuration.modules
 
 import com.rp199.template.service.SampleService
-import org.koin.dsl.module
+import io.ktor.server.plugins.di.DependencyRegistry
 
-val services = module {
-    single {
+fun DependencyRegistry.installServices() {
+    provide {
         SampleService()
     }
 }

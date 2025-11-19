@@ -6,7 +6,6 @@ plugins {
 
 dependencies {
     implementation(libs.bundles.ktor)
-    implementation(libs.bundles.koin)
     implementation(libs.bundles.logging)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.bundles.hoplite)
