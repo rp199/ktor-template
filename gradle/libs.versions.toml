@@ -4,7 +4,7 @@ kotlinx = "1.10.2"
 ktor = "3.3.3"
 logback = "1.5.23"
 hoplite = "2.9.0"
-kotest = "5.9.1"
+kotest = "6.0.7"
 micrometer = "1.12.6"
 
 [libraries]
@@ -36,7 +36,6 @@ micrometer-registry-prometheus = { module = "io.micrometer:micrometer-registry-p
 ktor-server-test-host-jvm = { module = "io.ktor:ktor-server-test-host-jvm", version.ref = "ktor" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
-kotest-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 kotest-json = { module = "io.kotest:kotest-assertions-json", version.ref = "kotest" }
 mockk-core = { module = "io.mockk:mockk", version = "1.14.7" }
@@ -67,7 +66,6 @@ logging = [
 test = [
     "kotest-runner-junit5",
     "kotest-assertions-core",
-    "kotest-datatest",
     "kotest-property",
     "kotest-json",
     "mockk-core",
