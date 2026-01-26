@@ -38,7 +38,7 @@ kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref 
 kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
 kotest-json = { module = "io.kotest:kotest-assertions-json", version.ref = "kotest" }
-mockk-core = { module = "io.mockk:mockk", version = "1.14.7" }
+mockk-core = { module = "io.mockk:mockk", version = "1.14.9" }
 
 [bundles]
 ktor = [
