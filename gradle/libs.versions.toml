@@ -5,7 +5,7 @@ ktor = "3.4.1"
 logback = "1.5.32"
 hoplite = "2.9.0"
 kotest = "6.1.4"
-micrometer = "1.12.6"
+micrometer = "1.16.3"
 
 [libraries]
 # kotlin
