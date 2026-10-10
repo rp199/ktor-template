@@ -3,7 +3,7 @@ kotlin = "2.4.21"
 kotlinx = "1.11.0"
 ktor = "3.6.0"
 logback = "1.6.5"
-hoplite = "3.0.1"
+hoplite = "3.0.3"
 kotest = "6.2.5"
 micrometer = "1.12.6"
 
